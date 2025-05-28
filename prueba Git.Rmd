@@ -1,0 +1,9 @@
+---
+title: "TP FINAL R"
+author: "Lu parallela"
+date: "2025-05-28"
+output: html_document
+---
+# Prueba Git 
+## Hola 
+### Hola Hola 
