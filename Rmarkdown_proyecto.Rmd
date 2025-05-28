@@ -29,4 +29,18 @@ x
 
 El dataset de los "Anuarios Estadísticos" del sistema universitario es la fuente más adecuada para estudiar la evolución en diversas áreas, las causas de ello y diferencias en la tasa de egreso universitaria en Buenos Aires. Además la información es confiable porque es oficial, completa, accesible, comparable entre años, y centrada en variables directamente vinculadas al fenómeno de estudio.
 
-#Probando **negrita** 
+#Factores que hacen que haya menor o mayor tasa de egresados en las universidades
+
+```{r}
+library(readxl)
+datos_chequeado <- read_excel("Universidades - egresados.xlsx")
+sum(datos_chequeado$Régimen == "Estatal" & datos_chequeado$Egresados >= 1)
+unique(datos_chequeado$Institución) # Esto nos dice el nombre de todas las universidades que hay
+library(tidyverse)
+datos_chequeado %>%
+  filter(`Año Informado` == 2010, Régimen == "Estatal") %>%
+  summarise(total = sum(Egresados, na.rm = TRUE))
+summary(datos_chequeado) 
+```
+
+
