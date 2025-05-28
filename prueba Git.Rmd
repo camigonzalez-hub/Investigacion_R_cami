@@ -1,6 +1,6 @@
 ---
 title: "TP FINAL R"
-author: "Lu parallela"
+author: "Lu Parallela"
 date: "2025-05-28"
 output: html_document
 ---
